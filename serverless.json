@@ -1,0 +1,48 @@
+{
+  "service": "serverless-demo-new",
+  "plugins": ["serverless-dotenv-plugin"],
+  "frameworkVersion": "3",
+  "configValidationMode": "error",
+
+  "provider": {
+    "name": "aws",
+    "runtime": "nodejs16.x",
+    "region": "ap-south-1",
+    "deploymentMethod": "direct",
+    "memorySize": 128
+  },
+  "functions": {
+    "hello": {
+      "handler": "src/handler.hello",
+      "events": [
+        {
+          "httpApi": "GET /hello"
+        }
+      ]
+    },
+    "greeting": {
+      "handler": "src/greeting.greetingHandler",
+      "events": [
+        {
+          "httpApi": "GET /greeting"
+        }
+      ]
+    },
+    "getRandomNumber": {
+      "handler": "src/randomNumber.randomNumberGenerator",
+      "events":[
+        {
+          "httpApi": "POST /generateNumber"
+        }
+      ]
+    },
+    "generateUpperCase": {
+      "handler": "src/handler.generateUpperCase",
+      "events":[
+        {
+          "httpApi": "POST /getUpperCase"
+        }
+      ]
+    }
+  }
+}
