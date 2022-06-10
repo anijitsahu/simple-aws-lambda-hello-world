@@ -1,35 +1,24 @@
-import { square } from "./square.js";
-import { getUpperCase } from "./dbOps.js";
+// functions are written as Arrow Functions
 
-const hello = async (event) => {
-  //  sending custom error by statusCode and body: JSON.stringify(...)
-  if (!event.queryStringParameters) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({
-        message: "Query String is not present",
-      }),
-    };
-  } else {
-    const res = {
+const helloHandler = async (event) => {
+  // sending custom  statusCode and body: JSON.stringify(...)
+  // sending a greeting message along with QueryString parameters
+  const res = {
+    statusCode: 200,
+    body: JSON.stringify({
       msg: "Hello world from AWS Lambda",
-      name: "anijit",
-      squareOfRececeivedNum: square(event.queryStringParameters.number),
+      squareOfRececeivedNum: square(event.queryStringParameters?.number || 5),
       event,
-    };
-    return JSON.stringify(res, null, 2);
-  }
+    }),
+  };
+  return res;
 };
 
-const generateUpperCase = async (event) => {
-  const { name } = JSON.parse(event.body);
-  if(!name){
-    return {
-      statusCode: 400,
-      body: "Name field is missing"
-    }
-  }
-  return getUpperCase(name);
+const square = (numberReceived) => {
+  // generating number from String using JavaScript Number constructor
+  let number = Number(numberReceived);
+  return number * number;
 };
 
-export { hello, generateUpperCase };
+// exporting only a particular function
+export { helloHandler };
