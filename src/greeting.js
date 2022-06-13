@@ -2,8 +2,19 @@
 
 export async function greetingHandler() {
   // a simple return statement without any status code
-  // default status is 200 I believe
+  // default status is 200 I believe 
+  // and headers will be part of the response, not in response headers 
   return {
+    headers: {
+      "Content-type": "application/json",
+      "x-xss-protection": "1; mode=block",
+      "x-frame-options": "DENY",
+      "content-security-policy":
+        "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'",
+      "x-content-type-options": "nosniff",
+      "strict-transport-security":
+        "max-age=63072000; includeSubdomains; preload",
+    },
     message: "Hello World from Lambda!!",
   };
 }
