@@ -2,9 +2,7 @@
 
 This example demonstrates how to deploy a [NodeJS](https://nodejs.org/en/docs/) function running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed function works with ```httpApi``` event definitions.
 
-This Example works with `httpApi` events. 
-
-When deployed the [AWS Lambda](https://aws.amazon.com/lambda/) function shows greeting messages. All the fuctions can be invoked  by an [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) event.
+When deployed the [AWS Lambda](https://aws.amazon.com/lambda/) function shows greeting messages. All the functions can be invoked  by an [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) event.
 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*. 
 
@@ -19,14 +17,14 @@ To use the code in this example you must have an valid [AWS account](https://aws
      Function are deployed using <a href="https://www.serverless.com/framework/docs/providers/aws/guide/intro">Serverless</a> Framework
   </li>  
   <li>
-    <code>serverless.json</code> is used for deployment configuration instead <code>serverless.yml</code>
+    <code>serverless.json</code> is used for deployment configuration instead of <code>serverless.yml</code>
   </li>  
   <li>
     All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> to store the <code>.zip</code> of the function code and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
   </li>  
 </ol>  
 
-6. `httpAPi` events are supported.
+6. `httpApi` events are supported.
 7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API Gateway](https://aws.amazon.com/api-gateway/)
 
 <ol start="8">
