@@ -2,7 +2,6 @@
   "service": "simple-aws-lambda-hello-world",
   "frameworkVersion": "3",
   "configValidationMode": "error",
-  "plugins": ["serverless-plugin-log-retention"],
 
   "provider": {
     "name": "aws",
@@ -10,10 +9,6 @@
     "region": "ap-south-1",
     "deploymentMethod": "direct",
     "memorySize": 128
-  },
-
-  "custom": {
-    "logRetentionInDays": 1
   },
 
   "functions": {
