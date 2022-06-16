@@ -9,5 +9,8 @@
   "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "serverless-plugin-log-retention": "^2.0.0"
+  }
 }

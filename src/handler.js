@@ -2,7 +2,6 @@
 
 const helloHandler = async (event) => {
   // sending custom  statusCode and body: JSON.stringify(...)
-  // sending a greeting message along with QueryString parameters
   const res = {
     statusCode: 200,
     headers: {
