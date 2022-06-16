@@ -6,7 +6,7 @@ When deployed the [AWS Lambda](https://aws.amazon.com/lambda/) function shows gr
 
 All *logs* for the function is kept in [AWS Cloudwatch](https://aws.amazon.com/cloudwatch/) i.e *persistent*. 
 
-To use the code in this example you must have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user.
+To use the code in this example you **must** have an valid [AWS account](https://aws.amazon.com/account/) and necessary [AWS IAM](https://aws.amazon.com/iam/) roles and programmatic access to an user.
 
 ## Features
 1. [AWS Lambda](https://aws.amazon.com/lambda/) function using [NodeJS](https://nodejs.org/en/docs/)
@@ -31,7 +31,7 @@ To use the code in this example you must have an valid [AWS account](https://aws
     <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
 </ol>  
 
-9. *Custom Headers* are added with the response for *obvious security* reasons.
+9. **Custom Headers** are added with the response for *obvious security* reasons.
 
 ## Usage
 
@@ -40,11 +40,10 @@ First clone the repo
 ```bash
 $ git clone git@github.com:anijitsahu/simple-aws-lambda-hello-world.git
 ```
-Install all the necessary dependencies by going inside the directory
+Go inside the directory
 
 ```bash
 $ cd simple-aws-lambda-hello-world.git
-$ npm install
 ```
 
 ### Deployment
